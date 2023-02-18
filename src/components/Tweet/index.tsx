@@ -2,7 +2,11 @@ import './styles.css'
 
 import { ChatCircle, ArrowsClockwise, Heart } from 'phosphor-react'
 
-export function Tweet(){
+interface TweetProps{
+    content: string
+}
+
+export function Tweet(props:  TweetProps){
     return(
         <a href='#' className="tweet">
             <img src="https://github.com/valeriast.png" alt="user" />
@@ -14,7 +18,7 @@ export function Tweet(){
                 </div>
 
                 <p>
-                    Primeiro tweet texto aleatório
+                    {props.content}
                 </p>
 
                 <div className="tweet-content-footer">
