@@ -1,10 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './global.css'
-import { Tweet } from './components/Tweet'
-import { SideBar } from './components/Sidebar'
-import { Header } from './components/Header.tsx'
-import { Separator } from './components/Separator'
 import { RouterProvider } from 'react-router-dom'
 import { router } from './routes'
 
@@ -12,11 +8,6 @@ import { router } from './routes'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-   <div className='layout'>    
-      <SideBar/>
-      <div className="content">
-        <RouterProvider router={router}/>
-      </div>
-   </div>
+     <RouterProvider router={router}/>
   </React.StrictMode>,
 )
